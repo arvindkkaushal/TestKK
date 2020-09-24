@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="result"
+            type="com.arv.mynytimes.model.Result"/>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_8dp">
+
+
+    <ImageView
+        android:id="@+id/circleIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/rightArrowIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_forward_24" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/title"
+        tools:text="@string/title"
+        app:layout_constraintEnd_toStartOf="@+id/rightArrowIV"
+        app:layout_constraintStart_toEndOf="@+id/circleIV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:ellipsize="end"
+        android:maxLines="2"/>
+
+    <TextView
+        android:id="@+id/bylineTV"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/byline"
+        tools:text="@string/byline"
+        app:layout_constraintEnd_toStartOf="@+id/rightArrowIV"
+        app:layout_constraintStart_toStartOf="@+id/titleTV"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"/>
+
+    <TextView
+        android:id="@+id/sourceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/source"
+        tools:text="@string/source"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bylineTV"
+        app:layout_constraintTop_toBottomOf="@+id/bylineTV" />
+
+    <TextView
+        android:id="@+id/published_dateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/date"
+        tools:text="@string/date"
+        app:layout_constraintBottom_toBottomOf="@+id/sourceTV"
+        app:layout_constraintEnd_toStartOf="@+id/rightArrowIV" />
+
+    <ImageView
+        android:id="@+id/dateIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/published_dateTV"
+        app:layout_constraintEnd_toStartOf="@+id/published_dateTV"
+        app:layout_constraintTop_toTopOf="@+id/published_dateTV"
+        app:srcCompat="@drawable/ic_calendar_today_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
